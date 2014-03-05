@@ -27,9 +27,9 @@ import javax.swing.JLabel;
 public class JanelaJogo extends JFrame {
 
 	private JButton[][] grade = new JButton[3][3];
-	private final Action acaoBotao = new SwingAction();
-	private final Action acaoNovoJogo = new SwingAction_1();
-	private final Action acaoSair = new SwingAction_2();
+	private final Action acaoBotao = new AcaoJogar();
+	private final Action acaoNovoJogo = new AcaoReiniciar();
+	private final Action acaoSair = new AcaoSair();
 
 	private JogoVelha jogo;
 	private JLabel lblStatus;
@@ -113,8 +113,8 @@ public class JanelaJogo extends JFrame {
 			}
 	}
 
-	private class SwingAction extends AbstractAction {
-		public SwingAction() {
+	private class AcaoJogar extends AbstractAction {
+		public AcaoJogar() {
 			putValue(NAME, null);
 			putValue(SHORT_DESCRIPTION, "Faz jogada");
 		}
@@ -146,8 +146,8 @@ public class JanelaJogo extends JFrame {
 		}
 	}
 
-	private class SwingAction_1 extends AbstractAction {
-		public SwingAction_1() {
+	private class AcaoReiniciar extends AbstractAction {
+		public AcaoReiniciar() {
 			putValue(NAME, "Novo jogo");
 			putValue(SHORT_DESCRIPTION, "Reinicia o jogo");
 		}
@@ -157,8 +157,8 @@ public class JanelaJogo extends JFrame {
 		}
 	}
 
-	private class SwingAction_2 extends AbstractAction {
-		public SwingAction_2() {
+	private class AcaoSair extends AbstractAction {
+		public AcaoSair() {
 			putValue(NAME, "Sair");
 			putValue(SHORT_DESCRIPTION, "Finaliza o programa");
 		}
