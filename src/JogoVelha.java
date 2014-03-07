@@ -59,6 +59,10 @@ public class JogoVelha {
 			&& tab[0][0] == tab[1][1] && tab[1][1] == tab[2][2]) {
 			return converteVencedor(tab[0][0]);
 		}
+		if(tab[0][2] != Jogador.VAZIO
+			&& tab[0][2] == tab[1][1] && tab[1][1] == tab[2][0]) {
+			return converteVencedor(tab[0][2]);
+		}
 		if(totalJogadas != 9)
 			return Vencedor.NENHUM; // jogo ainda não acabou
 		return Vencedor.EMPATE;
