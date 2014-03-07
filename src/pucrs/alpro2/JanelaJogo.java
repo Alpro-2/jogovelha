@@ -1,3 +1,5 @@
+package pucrs.alpro2;
+
 import java.awt.EventQueue;
 import java.awt.Font;
 

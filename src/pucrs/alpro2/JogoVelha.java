@@ -1,3 +1,5 @@
+package pucrs.alpro2;
+
 public class JogoVelha {
 	public enum Jogador { X, O, VAZIO };
 	public enum Vencedor { X, O, NENHUM, EMPATE };
